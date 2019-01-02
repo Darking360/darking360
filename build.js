@@ -10,7 +10,7 @@ const path = require('path')
 const options = {
   padding: 1,
   margin: 1,
-  borderStyle: 'double'
+  borderStyle: 'double-single'
 }
 
 // Text + chalk definitions
@@ -59,4 +59,4 @@ const output = heading + // data.name + data.handle
                newline + // data.labelWeb + data.web
                carding // data.labelCard + data.npx
 
-fs.writeFileSync(path.join(__dirname, 'bin/output'), chalk.keyword('orange')(boxen(output, options)))
+fs.writeFileSync(path.join(__dirname, 'bin/output'), chalk.green(boxen(output, options)))
