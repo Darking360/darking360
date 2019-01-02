@@ -10,23 +10,21 @@ const path = require('path')
 const options = {
   padding: 1,
   margin: 1,
-  borderStyle: 'round'
+  borderStyle: 'double'
 }
 
 // Text + chalk definitions
 const data = {
-  name: chalk.white('               Tierney Cyren'),
-  handle: chalk.white('bitandbang'),
-  work: chalk.white('Senior Cloud Developer Advocate at Microsoft'),
-  opensource: chalk.white('Node.js Community Committee ') + chalk.green('⬢'),
-  twitter: chalk.gray('https://twitter.com/') + chalk.cyan('bitandbang'),
-  npm: chalk.gray('https://npmjs.com/') + chalk.red('~bnb'),
-  github: chalk.gray('https://github.com/') + chalk.green('bnb'),
-  linkedin: chalk.gray('https://linkedin.com/in/') + chalk.blue('bitandbang'),
+  name: chalk.white('               Miguel Bolivar'),
+  handle: chalk.white('darking360'),
+  work: chalk.white('Fullstack React and NodeJS Developer at ') + chalk.keyword('orange')('Sancrisoft ') + chalk.blue('⚛ ') + chalk.green('⬢'),
+  twitter: chalk.gray('https://twitter.com/') + chalk.cyan('darking360'),
+  npm: chalk.gray('https://npmjs.com/') + chalk.red('~darking360'),
+  github: chalk.gray('https://github.com/') + chalk.green('darking360'),
+  linkedin: chalk.gray('https://linkedin.com/in/') + chalk.blue('darking360'),
   web: chalk.cyan('https://bnb.im'),
-  npx: chalk.red('npx') + ' ' + chalk.white('bitandbang'),
+  npx: chalk.red('npx') + ' ' + chalk.white('darking360'),
   labelWork: chalk.white.bold('       Work:'),
-  labelOpenSource: chalk.white.bold('Open Source:'),
   labelTwitter: chalk.white.bold('    Twitter:'),
   labelnpm: chalk.white.bold('        npm:'),
   labelGitHub: chalk.white.bold('     GitHub:'),
@@ -49,9 +47,9 @@ const carding = `${data.labelCard}  ${data.npx}`
 
 // Put all our output together into a single variable so we can use boxen effectively
 const output = heading + // data.name + data.handle
+               newline + // newline
                newline + newline + // Add one whole blank line
                working + newline + // data.labelWork + data.work
-               opensourcing + newline + newline + // data.labelOpenSource + data.opensource
                twittering + newline + // data.labelTwitter + data.twitter
                npming + newline + // data.labelnpm + data.npm
                githubing + newline + // data.labelGitHub + data.github
@@ -59,4 +57,4 @@ const output = heading + // data.name + data.handle
                webing + newline + newline + // data.labelWeb + data.web
                carding // data.labelCard + data.npx
 
-fs.writeFileSync(path.join(__dirname, 'bin/output'), chalk.green(boxen(output, options)))
+fs.writeFileSync(path.join(__dirname, 'bin/output'), chalk.keyword('orange')(boxen(output, options)))
