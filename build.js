@@ -15,13 +15,14 @@ const options = {
 
 // Text + chalk definitions
 const data = {
-  name: chalk.white('               Miguel Bolivar'),
-  handle: chalk.white('darking360'),
+  cell: chalk.green('+ ************************************************************** + '),
+  name: chalk.green('|') + chalk.bold.white('         Miguel Bolivar / darking360 almost everywhere          ') + chalk.green('|'),
+  handle: chalk.green('|') + chalk.white('                    > Constantly learning <                     ') + chalk.green('|'),
   work: chalk.white('Fullstack React and NodeJS Developer at ') + chalk.keyword('orange')('Sancrisoft ') + chalk.blue('⚛ ') + chalk.green('⬢'),
-  twitter: chalk.gray('https://twitter.com/') + chalk.cyan('darking360'),
-  npm: chalk.gray('https://npmjs.com/') + chalk.red('~darking360'),
-  github: chalk.gray('https://github.com/') + chalk.green('darking360'),
-  linkedin: chalk.gray('https://linkedin.com/in/') + chalk.blue('darking360'),
+  twitter: chalk.green('https://twitter.com/') + chalk.blue('darking360'),
+  npm: chalk.green('https://npmjs.com/') + chalk.red('~darking360'),
+  github: chalk.green('https://github.com/') + chalk.magenta('darking360'),
+  linkedin: chalk.green('https://linkedin.com/in/') + chalk.white('darking360'),
   web: chalk.cyan('https://bnb.im'),
   npx: chalk.red('npx') + ' ' + chalk.white('darking360'),
   labelWork: chalk.white.bold('       Work:'),
@@ -35,7 +36,8 @@ const data = {
 
 // Actual strings we're going to output
 const newline = '\n'
-const heading = `${data.name} / ${data.handle}`
+const space = ''
+const heading = ` ${space} ${data.cell} ${newline} ${space} ${data.name} ${newline} ${space} ${data.handle} ${newline} ${space} ${data.cell}`
 const working = `${data.labelWork}  ${data.work}`
 const opensourcing = `${data.labelOpenSource}  ${data.opensource}`
 const twittering = `${data.labelTwitter}  ${data.twitter}`
@@ -49,12 +51,12 @@ const carding = `${data.labelCard}  ${data.npx}`
 const output = heading + // data.name + data.handle
                newline + // newline
                newline + newline + // Add one whole blank line
-               working + newline + // data.labelWork + data.work
+               working + newline + newline + // data.labelWork + data.work
                twittering + newline + // data.labelTwitter + data.twitter
                npming + newline + // data.labelnpm + data.npm
                githubing + newline + // data.labelGitHub + data.github
                linkedining + newline + // data.labelLinkedIn + data.linkedin
-               webing + newline + newline + // data.labelWeb + data.web
+               newline + // data.labelWeb + data.web
                carding // data.labelCard + data.npx
 
 fs.writeFileSync(path.join(__dirname, 'bin/output'), chalk.keyword('orange')(boxen(output, options)))
