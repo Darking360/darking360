@@ -1,14 +1,14 @@
 {
-  "name": "bitandbang",
+  "name": "darking360",
   "version": "1.1.0",
-  "description": "A personal card for Tierney Cyren (@bitandbang)",
+  "description": "A personal card for Miguel Bolivar (@darking360)",
   "main": "index.js",
   "bin": {
-    "bitandbang": "./bin/card.js"
+    "darking360": "./bin/card.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bnb/bitandbang.git"
+    "url": "https://github.com/Darking360/bitandbang.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
