@@ -25,7 +25,7 @@
     "npx card",
     "business card"
   ],
-  "author": "Tierney Cyren <hello@bnb.im> (http://bnb.im)",
+  "author": "Miguel Bolivar <mbolivar360@gmail.com>",
   "license": "MIT",
   "files": [
     "bin/card.js",
